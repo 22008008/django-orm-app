@@ -11,19 +11,41 @@ Include your ER diagram here
 
 ### STEP 1:
 
-### STEP 2:
+create a course details of students
 
-### STEP 3:
 
-Write your own steps
+## STEP 2:
+
+enter a code of ORM
+
+## STEP 3:
+
+Push the code to github
 
 ## PROGRAM
 
-Include your code here
+```
+
+from django.db import models
+from django.contrib import admin
+
+class Courses(models.Model):
+    referencenumber = models.CharField(max_length=8,primary_key=True)
+    name = models.CharField(max_length=100)
+    age = models.IntegerField()
+    email = models.EmailField()
+    coursename=models.CharField(max_length=100)
+
+
+class CoursesAdmin(admin.ModelAdmin):
+    list_display = ('referencenumber','name','age','email','coursename')
+        
+```
 
 ## OUTPUT
 
-Include the screenshot of your admin page.
+![output](.png)
 
 
-## RESULT
+## RESULT:
+Thus the experiment is completed successfully
